@@ -2,7 +2,7 @@
 /*
  * Plugin Name: JSM's Screenshot Machine Shortcode
  * Plugin URI: http://surniaulula.com/extend/plugins/screenshot-machine-shortcode/
- * Author: Jean-Sebastien Morisset
+ * Author: JS Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
