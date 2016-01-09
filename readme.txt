@@ -7,7 +7,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested Up To: 4.4
-Stable Tag: 1.1
+Stable Tag: 1.1.1
 
 Shortcode to include images from Screenshot Machine in your content.
 
@@ -90,8 +90,31 @@ Example:
 
 == Changelog ==
 
+= Version 1.1.1 (2016/01/08) =
+
+* **New Features**
+	* *None*
+* **Improvements**
+	* Updated the plugin name and assets (icons and banner).
+* **Bugfixes**
+	* *None*
+* **Developer Notes**
+	* *None*
+
 = Version 1.1 =
 
-* Removed the 'blank' argument, replacing it with 'target' instead.
-* Added the 'format', 'days', and 'wait' arguments.
+* **New Features**
+	* Added the 'format', 'days', and 'wait' arguments.
+* **Improvements**
+	* Removed the 'blank' argument, replacing it with 'target' instead.
+* **Bugfixes**
+	* *None*
+* **Developer Notes**
+	* *None*
+
+== Upgrade Notice ==
+
+= 1.1.1 =
+
+2016/01/08 - Updated the plugin name and assets (icons and banner).
 
