@@ -1,7 +1,7 @@
 === JSM's Screenshot Machine Shortcode ===
 Plugin Name: JSM's Screenshot Machine Shortcode
 Plugin Slug: screenshot-machine-shortcode
-Contributors: jsmoriss
+Contributors: JS Morisset
 Tags: screenshot, machine, shortcode
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
