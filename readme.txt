@@ -88,29 +88,48 @@ Example:
 
 == Frequently Asked Questions ==
 
+= Frequently Asked Questions =
+
+* None
+
+== Other Notes ==
+
+= Additional Documentation =
+
+* None
+
+== Screenshots ==
+
 == Changelog ==
 
-= Version 1.1.1 (2016/01/08) =
+= Repositories =
 
-* **New Features**
-	* *None*
-* **Improvements**
+* [GitHub](https://github.com/jsmoriss/screenshot-machine-shortcode)
+* [WordPress.org](https://wordpress.org/plugins/screenshot-machine-shortcode/developers/)
+
+= Changelog / Release Notes =
+
+**Version 1.1.1 (2016/01/08)**
+
+* *New Features*
+	* None
+* *Improvements*
 	* Updated the plugin name and assets (icons and banner).
-* **Bugfixes**
-	* *None*
-* **Developer Notes**
-	* *None*
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
 
-= Version 1.1 =
+**Version 1.1**
 
-* **New Features**
+* *New Features*
 	* Added the 'format', 'days', and 'wait' arguments.
-* **Improvements**
+* *Improvements*
 	* Removed the 'blank' argument, replacing it with 'target' instead.
-* **Bugfixes**
-	* *None*
-* **Developer Notes**
-	* *None*
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
 
 == Upgrade Notice ==
 
