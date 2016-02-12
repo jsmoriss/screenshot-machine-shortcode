@@ -64,7 +64,7 @@ Example:
 
 == Installation ==
 
-*Automated Install*
+= Automated Install =
 
 1. Go to the wp-admin/ section of your website
 1. Select the *Plugins* menu item
@@ -74,7 +74,7 @@ Example:
 1. Click the *Install Now* link for the plugin
 1. Click the *Activate Plugin* link
 
-*Semi-Automated Install*
+= Semi-Automated Install =
 
 1. Download the plugin archive file
 1. Go to the wp-admin/ section of your website

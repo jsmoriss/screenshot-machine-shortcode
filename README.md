@@ -68,7 +68,7 @@
 
 <h2>Installation</h2>
 
-<p><em>Automated Install</em></p>
+<h4>Automated Install</h4>
 
 <ol>
 <li>Go to the wp-admin/ section of your website</li>
@@ -80,7 +80,7 @@
 <li>Click the <em>Activate Plugin</em> link</li>
 </ol>
 
-<p><em>Semi-Automated Install</em></p>
+<h4>Semi-Automated Install</h4>
 
 <ol>
 <li>Download the plugin archive file</li>
