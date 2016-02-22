@@ -120,17 +120,6 @@ Example:
 * *Developer Notes*
 	* None
 
-**Version 1.1**
-
-* *New Features*
-	* Added the 'format', 'days', and 'wait' arguments.
-* *Improvements*
-	* Removed the 'blank' argument, replacing it with 'target' instead.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
 == Upgrade Notice ==
 
 = 1.1.1 =
