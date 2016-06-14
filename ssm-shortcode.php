@@ -8,7 +8,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Shortcode for Screenshot Machine Images
  * Requires At Least: 3.0
- * Tested Up To: 4.5
+ * Tested Up To: 4.5.2
  * Version: 1.1.1
  *
  * This script is free software; you can redistribute it and/or modify it under
