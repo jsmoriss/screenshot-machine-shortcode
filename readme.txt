@@ -124,5 +124,5 @@ Example:
 
 = 1.1.1 =
 
-2016/01/08 - Updated the plugin name and assets (icons and banner).
+(2016/01/08) Updated the plugin name and assets (icons and banner).
 
