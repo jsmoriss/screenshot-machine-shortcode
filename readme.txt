@@ -13,7 +13,7 @@ Shortcode to include images from Screenshot Machine in your content.
 
 == Description ==
 
-Use the `&#91;ssm&#93;` shortcode in your content with the following arguments:
+Use the `ssm` shortcode in your content with the following arguments:
 
 * key="{account key}"
 * url="{website url}"

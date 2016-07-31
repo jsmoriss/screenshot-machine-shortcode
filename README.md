@@ -13,7 +13,7 @@
 
 <h2>Description</h2>
 
-<p>Use the <code>&amp;#91;ssm&amp;#93;</code> shortcode in your content with the following arguments:</p>
+<p>Use the <code>ssm</code> shortcode in your content with the following arguments:</p>
 
 <ul>
 <li>key="{account key}"</li>
