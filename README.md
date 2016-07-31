@@ -62,8 +62,9 @@
 
 <p>Example:</p>
 
-<pre><code>&amp;#91;ssm key="abc123" url="http://surniaulula.com/extend/plugins/screenshot-machine-shortcode/" size="S"&amp;#93;
-</code></pre>
+<pre>
+&#91;ssm key="abc123" url="http://surniaulula.com/extend/plugins/screenshot-machine-shortcode/" size="S"&#93;
+</pre>
 
 
 <h2>Installation</h2>
