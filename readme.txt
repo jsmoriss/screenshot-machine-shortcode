@@ -1,10 +1,14 @@
 === JSM's Screenshot Machine Shortcode ===
 Plugin Name: JSM's Screenshot Machine Shortcode
 Plugin Slug: screenshot-machine-shortcode
-Contributors: jsmoriss
-Tags: screenshot, machine, shortcode
+Text Domain: screenshot-machine-shortcode
+Domain Path: /languages
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
+Donate Link:
+Assets URI: https://jsmoriss.github.io/screenshot-machine-shortcode/assets/
+Tags: screenshot, machine, shortcode
+Contributors: jsmoriss
 Requires At Least: 3.0
 Tested Up To: 4.6
 Stable Tag: 1.1.1
