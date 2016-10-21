@@ -113,20 +113,22 @@ Example:
 
 = Changelog / Release Notes =
 
-**Version 1.1.1 (2016/01/08)**
+**Version 1.1.2-1 (2016/10/21)**
+
+Maintenance Release.
 
 * *New Features*
 	* None
 * *Improvements*
-	* Updated the plugin name and assets (icons and banner).
+	* None
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* None
+	* Minor code improvements for style and readability.
 
 == Upgrade Notice ==
 
-= 1.1.1 =
+= 1.1.2-1 =
 
-(2016/01/08) Updated the plugin name and assets (icons and banner).
+(2016/10/21) 
 
