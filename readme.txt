@@ -9,9 +9,9 @@ Donate Link:
 Assets URI: https://jsmoriss.github.io/screenshot-machine-shortcode/assets/
 Tags: screenshot, machine, shortcode
 Contributors: jsmoriss
-Requires At Least: 3.0
+Requires At Least: 3.5
 Tested Up To: 4.6.1
-Stable Tag: 1.1.1
+Stable Tag: 1.1.2-1
 
 Shortcode to include images from Screenshot Machine in your content.
 
