@@ -1,15 +1,18 @@
 <?php
 /*
  * Plugin Name: JSM's Screenshot Machine Shortcode
+ * Text Domain: screenshot-machine-shortcode
+ * Domain Path: /languages
  * Plugin URI: http://surniaulula.com/extend/plugins/screenshot-machine-shortcode/
+ * Assets URI: https://jsmoriss.github.io/screenshot-machine-shortcode/assets/
  * Author: JS Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Shortcode for Screenshot Machine Images
  * Requires At Least: 3.0
- * Tested Up To: 4.5.3
- * Version: 1.1.1
+ * Tested Up To: 4.6.1
+ * Version: 1.1.2-1
  *
  * This script is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -25,19 +28,19 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) 
-	die( 'Sorry, you cannot call this webpage directly.' );
+	die( 'These aren\'t the droids you\'re looking for...' );
 
-if ( ! class_exists( 'ScreenShotMachineShortCode' ) ) {
+if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 
-	class ScreenShotMachineShortCode {  
+	class ScreenshotMachineShortCode {  
 
 		protected $api_url = 'http://api.screenshotmachine.com/';  
 
 		public function __construct()  {  
-			add_shortcode('ssm', array($this, 'shortcode'));
+			add_shortcode( 'ssm', array( &$this, 'shortcode' ) );
 		}  
 
-		public function shortcode($atts, $content = NULL){
+		public function shortcode( $atts, $content = null ){
 
 			extract( shortcode_atts( array(
 				'key' => '',
@@ -66,7 +69,7 @@ if ( ! class_exists( 'ScreenShotMachineShortCode' ) ) {
 				case 'X' : $width=1024; $height=768; break;
 			}
 
-			$output = '';
+			$oret_html = '';
 			$classnames = array( 'ssm' );
 			$img_url = $this->api_url.'?key='.$key.
 				'&url='.urlencode($url).
@@ -77,29 +80,27 @@ if ( ! class_exists( 'ScreenShotMachineShortCode' ) ) {
 
 			if ( $refresh )  {
 			    	$classnames[] = 'ssm_refresh';
-				wp_register_script( 'ssm_refresh', plugins_url( 'ssm-shortcode.js' , __FILE__ ) ); 
-   					wp_enqueue_script( 'ssm_refresh', array('jquery'), '1.0.0', TRUE );
+				wp_register_script( 'ssm_refresh', plugins_url( 'screenshot-machine-shortcode.js' , __FILE__ ) ); 
+   					wp_enqueue_script( 'ssm_refresh', array( 'jquery' ), '1.0.0', true );
 			}
 
 			if ( $link == true ) {
-				$output .= '<a href="'. $url .'" title="'. $title .'" class="ssm_link" ';
-				if ( ! empty( $target ) ) 
-					$output .= ' target="' . $target . '" ';
-				$output .= ' >';
+				$ret_html .= '<a href="'.$url.'" title="'.$title.'" class="ssm_link" '.
+					( empty( $target ) ? '' : ' target="'.$target.'" ' ).' >';
 			}
 
-			$output .= '<img alt="'.$title.'" class="'.implode (' ', $classnames).'" data-refreshcounter="0" 
+			$ret_html .= '<img alt="'.$title.'" class="'.implode( ' ', $classnames ).'" data-refreshcounter="0" 
 				data-src="'.$img_url.'" data-width="'.$width.'" data-height="'.$height.'" 
 				src="'.$img_url.'" width="'.$width.'" height="'.$height.'" />';
 
 			if ( $link == true )
-				$output .= '</a>';
+				$ret_html .= '</a>';
 
-			return $output;
-		}  
-	}	 
+			return $ret_html;
+		}
+	}
 
-	$_ScreenShotMachineShortCode = new ScreenShotMachineShortCode(); 
+	$_ScreenshotMachineShortCode = new ScreenshotMachineShortCode(); 
 }
 
 ?>
