@@ -18,7 +18,7 @@ msgid "JSM's Screenshot Machine Shortcode"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://surniaulula.com/extend/plugins/screenshot-machine-shortcode/"
+msgid "https://surniaulula.com/extend/plugins/screenshot-machine-shortcode/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -30,5 +30,5 @@ msgid "JS Morisset"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://surniaulula.com/"
+msgid "https://surniaulula.com/"
 msgstr ""

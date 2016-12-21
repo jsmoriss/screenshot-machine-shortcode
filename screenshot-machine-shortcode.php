@@ -3,10 +3,10 @@
  * Plugin Name: JSM's Screenshot Machine Shortcode
  * Text Domain: screenshot-machine-shortcode
  * Domain Path: /languages
- * Plugin URI: http://surniaulula.com/extend/plugins/screenshot-machine-shortcode/
+ * Plugin URI: https://surniaulula.com/extend/plugins/screenshot-machine-shortcode/
  * Assets URI: https://jsmoriss.github.io/screenshot-machine-shortcode/assets/
  * Author: JS Morisset
- * Author URI: http://surniaulula.com/
+ * Author URI: https://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Shortcode for Screenshot Machine Images
@@ -33,7 +33,7 @@
  * PARTICULAR PURPOSE. See the GNU General Public License for more details at
  * http://www.gnu.org/licenses/.
  *
- * Copyright 2013-2016 Jean-Sebastien Morisset (http://surniaulula.com/)
+ * Copyright 2013-2016 Jean-Sebastien Morisset (https://surniaulula.com/)
  */
 
 if ( ! defined( 'ABSPATH' ) ) 
