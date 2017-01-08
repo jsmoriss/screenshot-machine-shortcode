@@ -108,7 +108,7 @@ Example:
 
 = Repositories =
 
-* [GitHub](https://github.com/jsmoriss/screenshot-machine-shortcode)
+* [GitHub](https://jsmoriss.github.io/screenshot-machine-shortcode/)
 * [WordPress.org](https://wordpress.org/plugins/screenshot-machine-shortcode/developers/)
 
 = Version Numbering Scheme =
