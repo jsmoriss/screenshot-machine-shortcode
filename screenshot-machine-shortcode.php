@@ -10,7 +10,7 @@
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Shortcode for Screenshot Machine Images
- * Requires At Least: 3.7
+ * Requires At Least: 3.8
  * Tested Up To: 4.7.2
  * Version: 1.1.2-1
  *
