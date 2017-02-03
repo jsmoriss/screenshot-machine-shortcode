@@ -9,7 +9,7 @@ Donate Link: https://www.paypal.me/jsmoriss
 Assets URI: https://jsmoriss.github.io/screenshot-machine-shortcode/assets/
 Tags: screenshot, machine, shortcode
 Contributors: jsmoriss
-Requires At Least: 3.7
+Requires At Least: 3.8
 Tested Up To: 4.7.2
 Stable Tag: 1.1.2-1
 
