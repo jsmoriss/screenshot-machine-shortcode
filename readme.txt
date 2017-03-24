@@ -5,7 +5,6 @@ Text Domain: screenshot-machine-shortcode
 Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
-Donate Link: https://www.paypal.me/jsmoriss
 Assets URI: https://jsmoriss.github.io/screenshot-machine-shortcode/assets/
 Tags: screenshot, machine, shortcode
 Contributors: jsmoriss
