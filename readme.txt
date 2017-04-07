@@ -110,7 +110,7 @@ Example:
 * [GitHub](https://jsmoriss.github.io/screenshot-machine-shortcode/)
 * [WordPress.org](https://wordpress.org/plugins/screenshot-machine-shortcode/developers/)
 
-= Version Numbering Scheme =
+= Version Numbering =
 
 Version components: `{major}.{minor}.{bugfix}-{stage}{level}`
 
