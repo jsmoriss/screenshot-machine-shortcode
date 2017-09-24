@@ -13,7 +13,7 @@
 
 <h2>Description</h2>
 
-<p>Shortcode to include images from Screenshot Machine in your content.</p>
+<p>Shortcode to include images from <a href="http://screenshotmachine.com/">Screenshot Machine</a> in your content.</p>
 
 <p>Use the <code>ssm</code> shortcode in your content with the following arguments:</p>
 
@@ -31,7 +31,7 @@
 <li><code>refresh="{yes|no}"</code> (default is yes)</li>
 </ul>
 
-<p>You can find the <code>{customer key}</code> on <a href="https://www.screenshotmachine.com/account.php">your Screenshot Machine account/settings page</a>.</p>
+<p>You can find the <code>{customer key}</code> on <a href="https://www.screenshotmachine.com/account.php">your Screenshot Machine customer profile</a>.</p>
 
 <p>The <code>{url}</code> is the web page URL you want to capture in the screenshot.</p>
 

@@ -17,7 +17,7 @@ Shortcode to include images from Screenshot Machine in your content.
 
 == Description ==
 
-Shortcode to include images from Screenshot Machine in your content.
+Shortcode to include images from [Screenshot Machine](http://screenshotmachine.com/) in your content.
 
 Use the `ssm` shortcode in your content with the following arguments:
 
@@ -33,7 +33,7 @@ Use the `ssm` shortcode in your content with the following arguments:
 * `target="{frame name}"` (default is _blank)
 * `refresh="{yes|no}"` (default is yes)
 
-You can find the `{customer key}` on [your Screenshot Machine account/settings page](https://www.screenshotmachine.com/account.php).
+You can find the `{customer key}` on [your Screenshot Machine customer profile](https://www.screenshotmachine.com/account.php).
 
 The `{url}` is the web page URL you want to capture in the screenshot.
 
