@@ -66,7 +66,7 @@ The refresh `{yes|no}` value includes javascript to retry the image every second
 Example shortcode:
 
 <pre>
-&#91;ssm key="abc123" url="https://surniaulula.com/extend/plugins/screenshot-machine-shortcode/" dimension="800x600"&#93;
+&#91;ssm key="abc123" url="https://google.com/" dimension="800x600"&#93;
 </pre>
 
 == Installation ==
