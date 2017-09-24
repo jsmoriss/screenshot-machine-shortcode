@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.8.2
 Requires PHP: 5.3
-Stable Tag: 1.1.3
+Stable Tag: 2.0.0
 
 Shortcode to include images from Screenshot Machine in your content.
 
@@ -19,51 +19,54 @@ Shortcode to include images from Screenshot Machine in your content.
 
 Use the `ssm` shortcode in your content with the following arguments:
 
-* key="{account key}"
-* url="{website url}"
-* size="{size letter}" (default=T)
-* format="{jpg|png|gif}" (default=jpg)
-* days="{cache expiration}" (default=14)
-* wait="{wait in ms}" (default=200)
-* title="{href title}"
-* link="{yes|no}" (default=yes)
-* target="{link target}" (default=_blank)
-* refresh="{yes|no}" (default=yes)
+* `key="{account key}"`
+* `url="{url}"`
+* `dimension="{width x height}"` (default is 120x90)
+* `device="{desktop|phone|tablet}"` (default is desktop)
+* `format="{jpg|png|gif}"` (default is jpg)
+* `days="{cache expiration}"` (default is 14)
+* `wait="{wait in ms}"` (default is 200)
+* `title="{href title}"
+* `link="{yes|no}"` (default is yes)
+* `target="{link target}"` (default is _blank)
+* `refresh="{yes|no}"` (default is yes)
 
-<!--more-->
+You can find the `{account key}` on [your Screenshot Machine account/settings page](https://www.screenshotmachine.com/account.php).
 
-You can find the {account key} on [your Screenshot Machine account/settings page](https://www.screenshotmachine.com/account.php).
+The `{url}` is the web page URL you want to capture in the screenshot.
 
-The {website url} is the web page URL to capture into a screenshot.
+Example dimension values:
 
-Valid {size letter} values are:
+* `320x240` - screenshot size 320x240 pixels
+* `800x600` - screenshot size 800x600 pixels
+* `1024x768` - screenshot size 1024x768 pixels
+* `1920x1080` - screenshot size 1920x1080 pixels
+* `1024xfull` - full page screenshot with width equals to 1024 pixels (can be pretty long)
 
-* T = Width 120 x Height 90
-* S = Width 200 x Height 150
-* E = Width 320 x Height 240
-* N = Width 400 x Height 300
-* M = Width 640 x Height 480
-* L = Width 800 x Height 600
-* X = Width 1024 x Height 768
+Example device and dimension values:
 
-{jpeg|png|gif} is the image format to use (default is jpg).
+* `device="desktop"` and `dimension="1024x768"` - desktop screenshot with size 1024x768 pixels
+* `device="phone"` and `dimension="480x800"` - mobile phone screenshot with size 480x800 pixels
+* `device="tablet"` and `dimension="800x1280"` - tablet screenshot with size 800x1280 pixels
 
-{cache expiration} is the number of days a screenshot should be used before a new one is created.
+`{jpeg|png|gif}` is the image format to use (default is jpg).
 
-{wait in ms} is the number of milliseconds to wait before capturing the screenshot.
+`{cache expiration}` is the number of days a screenshot should be used before a new one is created.
 
-{href title} is the title text for the image alt and link title.
+`{wait in ms}` is the number of milliseconds to wait before capturing the screenshot.
 
-The link yes/no value will determine if the image is linked to the web page URL or not.
+`{href title}` is the title text for the image alt and link title.
 
-The {link target} default will open links in a new window/tab. An empty string, '_self', '_top', '_parent', and a framename are also valid.
+The link `{yes|no}` value will determine if the image is linked to the web page URL or not.
 
-The refresh parameter includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).
+The `{link target}` default will open links in a new window/tab. An empty string, '_self', '_top', '_parent', and a framename are also valid.
+
+The refresh `{yes|no}` value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).
 
 Example:
 
 <pre>
-&#91;ssm key="abc123" url="https://surniaulula.com/extend/plugins/screenshot-machine-shortcode/" size="S"&#93;
+&#91;ssm key="abc123" url="https://surniaulula.com/extend/plugins/screenshot-machine-shortcode/" dimension="800x600"&#93;
 </pre>
 
 == Installation ==
@@ -122,21 +125,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 1.1.3 (2017/04/08)**
+**Version 2.0.0 (2017/09/24)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* None
+	* Added support for the new "dimension" argument.
+	* Deprecated the "size" argument -- older size values are converted to dimension values for backwards compatibility.
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Maintenance release - update to version numbering scheme.
-	* Dropped the package number from the production version string.
+	* None
 
 == Upgrade Notice ==
 
-= 1.1.3 =
+= 2.0.0 =
 
-(2017/04/08) Maintenance release - update to version numbering scheme.
+(2017/09/24) Added support for the new "dimension" argument. Deprecated the "size" argument -- older size values are converted to dimension values for backwards compatibility.
 
