@@ -13,6 +13,8 @@
 
 <h2>Description</h2>
 
+<p>Shortcode to include images from Screenshot Machine in your content.</p>
+
 <p>Use the <code>ssm</code> shortcode in your content with the following arguments:</p>
 
 <ul>

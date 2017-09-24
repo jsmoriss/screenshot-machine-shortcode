@@ -17,6 +17,8 @@ Shortcode to include images from Screenshot Machine in your content.
 
 == Description ==
 
+Shortcode to include images from Screenshot Machine in your content.
+
 Use the `ssm` shortcode in your content with the following arguments:
 
 * `key="{customer key}"`
