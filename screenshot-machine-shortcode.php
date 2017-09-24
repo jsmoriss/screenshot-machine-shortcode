@@ -13,7 +13,7 @@
  * Requires At Least: 3.7
  * Tested Up To: 4.8.2
  * Requires PHP: 5.3
- * Version: 1.1.3
+ * Version: 2.0.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -33,73 +33,111 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 
 	class ScreenshotMachineShortCode {  
 
-		protected $api_url = 'http://api.screenshotmachine.com/';  
+		private static $instance;
+		private static $api_url = 'http://api.screenshotmachine.com/';  
 
 		public function __construct()  {  
-			add_shortcode( 'ssm', array( &$this, 'shortcode' ) );
+
+			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
+
+			add_shortcode( 'ssm', array( __CLASS__, 'shortcode' ) );
 		}  
 
-		public function shortcode( $atts, $content = null ){
+		public static function &get_instance() {
+			if ( ! isset( self::$instance ) ) {
+				self::$instance = new self;
+			}
+			return self::$instance;
+		}
+
+		public static function load_textdomain() {
+			load_plugin_textdomain( 'screenshot-machine-shortcode', false, 'screenshot-machine-shortcode/languages/' );
+		}
+
+		public static function shortcode( $atts, $content = null ){
 
 			extract( shortcode_atts( array(
 				'key' => '',
 				'url' => '',
-				'size' => 'T',
+				'size' => '',		// deprecated
+				'dimension' => '120x90',
+				'device' => 'desktop',
 				'format' => 'jpg',
-				'days' => '14',
-				'wait' => '200',
+				'days' => '14',		// for cacheLimit query value
+				'wait' => '200',	// for timeout query value
 				'title' => '',
 				'link' => true,
 				'target' => '_blank',
 				'refresh' => true,
+				'width' => '',
+				'height' => '',
 			), $atts ) );
 
-			$size = strtoupper( $size );
+			$html = '';
+			$classes = array( 'ssm' );
+			$size = strtoupper( $size );	// just in case
+			$dimension = strtolower( str_replace( ' ', '', $dimension ) );	// just in case
 			$link = filter_var( $link, FILTER_VALIDATE_BOOLEAN );
 			$refresh = filter_var( $refresh, FILTER_VALIDATE_BOOLEAN );
 
 			switch ( $size ) {
-				case 'T' : $width=120; $height=90; break;
-				case 'S' : $width=200; $height=150; break;
-				case 'E' : $width=320; $height=240; break;
-				case 'N' : $width=400; $height=300; break;
-				case 'M' : $width=640; $height=480; break;
-				case 'L' : $width=800; $height=600; break;
-				case 'X' : $width=1024; $height=768; break;
+				case 'T': $dimension='120x90'; break;
+				case 'S': $dimension='200x150'; break;
+				case 'E': $dimension='320x240'; break;
+				case 'N': $dimension='400x300'; break;
+				case 'M': $dimension='640x480'; break;
+				case 'L': $dimension='800x600'; break;
+				case 'X': $dimension='1024x768'; break;
+				default: break;	// nothing to do
 			}
 
-			$oret_html = '';
-			$classnames = array( 'ssm' );
-			$img_url = $this->api_url.'?key='.$key.
-				'&url='.urlencode($url).
-				'&size='.$size.
-				'&format='.$format.
-				'&cacheLimit='.$days.
-				'&timeout='.$wait;
+			// dimensions can be 1024x768 or 1024xfull
+			if ( preg_match( '/^([0-9]+)x([0-9]+|full)$/', $dimension, $matches ) ) {
+				$width = $matches[1];
+				$height = $matches[2] !== 'full' ? $matches[2] : '';
+			}
+
+			$img_url = esc_url( add_query_arg( array(
+				'key' => $key,
+				'url' => urlencode( $url ),
+				'dimension' => $dimension,
+				'format' => $format,
+				'cacheLimit' => $days,
+				'timeout' => $wait,
+			), self::$api_url ) );
 
 			if ( $refresh )  {
-			    	$classnames[] = 'ssm_refresh';
+			    	$classes[] = 'ssm_refresh';
 				wp_register_script( 'ssm_refresh', plugins_url( 'screenshot-machine-shortcode.js' , __FILE__ ) ); 
    					wp_enqueue_script( 'ssm_refresh', array( 'jquery' ), '1.0.0', true );
 			}
 
 			if ( $link == true ) {
-				$ret_html .= '<a href="'.$url.'" title="'.$title.'" class="ssm_link" '.
+				$html .= '<a href="'.$url.'" title="'.$title.'" class="ssm_link" '.
 					( empty( $target ) ? '' : ' target="'.$target.'" ' ).' >';
 			}
 
-			$ret_html .= '<img alt="'.$title.'" class="'.implode( ' ', $classnames ).'" data-refreshcounter="0" 
-				data-src="'.$img_url.'" data-width="'.$width.'" data-height="'.$height.'" 
-				src="'.$img_url.'" width="'.$width.'" height="'.$height.'" />';
+			$html .= '<img '.
+				'alt="'.$title.'" '.
+				'class="'.implode( ' ', $classes ).'" '.
+				'data-refreshcounter="0" '.
+				'data-src="'.$img_url.'" '.
+				( $width !== '' ? 'data-width="'.$width.'" ' : '' ).
+				( $height !== '' ? 'data-height="'.$height.'" ' : '' ).
+				'src="'.$img_url.'" '.
+				( $width !== '' ? 'width="'.$width.'" ' : '' ).
+				( $height !== '' ? 'height="'.$height.'" ' : '' ).
+				'/>';
 
-			if ( $link == true )
-				$ret_html .= '</a>';
+			if ( $link == true ) {
+				$html .= '</a>';
+			}
 
-			return $ret_html;
+			return $html;
 		}
 	}
 
-	$_ScreenshotMachineShortCode = new ScreenshotMachineShortCode(); 
+	ScreenshotMachineShortCode::get_instance(); 
 }
 
 ?>
