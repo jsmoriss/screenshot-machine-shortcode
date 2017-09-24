@@ -59,7 +59,7 @@ The `{href title}` is a title text for the image alt and title attributes.
 
 The link `{yes|no}` value will determine if the image is linked to the web page URL or not.
 
-The target `{frame name}` default value opens the link in a new window/tab. An empty string, "_self", "_top", "_parent", and an HTML frame name are also valid values.
+The target `{frame name}` default value opens the link in a new window/tab. An empty string, "_self", "_top", "_parent", or an HTML frame name are also valid values.
 
 The refresh `{yes|no}` value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).
 

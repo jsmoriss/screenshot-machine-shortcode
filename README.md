@@ -61,7 +61,7 @@
 
 <p>The link <code>{yes|no}</code> value will determine if the image is linked to the web page URL or not.</p>
 
-<p>The target <code>{frame name}</code> default value opens the link in a new window/tab. An empty string, "_self", "_top", "_parent", and an HTML frame name are also valid values.</p>
+<p>The target <code>{frame name}</code> default value opens the link in a new window/tab. An empty string, "_self", "_top", "_parent", or an HTML frame name are also valid values.</p>
 
 <p>The refresh <code>{yes|no}</code> value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).</p>
 
