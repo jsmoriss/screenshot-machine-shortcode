@@ -19,7 +19,7 @@ Shortcode to include images from Screenshot Machine in your content.
 
 Use the `ssm` shortcode in your content with the following arguments:
 
-* `key="{account key}"`
+* `key="{customer key}"`
 * `url="{url}"`
 * `dimension="{width x height}"` (default is 120x90)
 * `device="{desktop|phone|tablet}"` (default is desktop)
@@ -31,7 +31,7 @@ Use the `ssm` shortcode in your content with the following arguments:
 * `target="{link target}"` (default is _blank)
 * `refresh="{yes|no}"` (default is yes)
 
-You can find the `{account key}` on [your Screenshot Machine account/settings page](https://www.screenshotmachine.com/account.php).
+You can find the `{customer key}` on [your Screenshot Machine account/settings page](https://www.screenshotmachine.com/account.php).
 
 The `{url}` is the web page URL you want to capture in the screenshot.
 
