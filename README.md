@@ -25,7 +25,7 @@
 <li><code>wait="{wait in ms}"</code> (default is 200)</li>
 <li><code>title="{href title}"</code></li>
 <li><code>link="{yes|no}"</code> (default is yes)</li>
-<li><code>target="{link target}"</code> (default is _blank)</li>
+<li><code>target="{frame name}"</code> (default is _blank)</li>
 <li><code>refresh="{yes|no}"</code> (default is yes)</li>
 </ul>
 
@@ -51,25 +51,21 @@
 <li><code>device="tablet"</code> and <code>dimension="800x1280"</code> - tablet screenshot with size 800x1280 pixels</li>
 </ul>
 
-<p><code>{jpeg|png|gif}</code>
- is the image format to use (default is jpg).</p>
+<p>The format <code>{jpeg|png|gif}</code> is an image format to use for the screenshot (default is jpg).</p>
 
-<p><code>{cache expiration}</code>
- is the number of days a screenshot should be used before a new one is created.</p>
+<p>The <code>{cache expiration}</code> is a number of days a screenshot should be used before a new one is created (default is 14).</p>
 
-<p><code>{wait in ms}</code>
- is the number of milliseconds to wait before capturing the screenshot.</p>
+<p>The <code>{wait in ms}</code> is a number of milliseconds to wait before capturing the screenshot (default is 200).</p>
 
-<p><code>{href title}</code>
- is the title text for the image alt and link title.</p>
+<p>The <code>{href title}</code> is a title text for the image alt and title attributes.</p>
 
 <p>The link <code>{yes|no}</code> value will determine if the image is linked to the web page URL or not.</p>
 
-<p>The <code>{link target}</code> default will open links in a new window/tab. An empty string, '_self', '_top', '_parent', and a framename are also valid.</p>
+<p>The target <code>{frame name}</code> default value opens the link in a new window/tab. An empty string, "_self", "_top", "_parent", and an HTML frame name are also valid values.</p>
 
 <p>The refresh <code>{yes|no}</code> value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).</p>
 
-<p>Example:</p>
+<p>Example shortcode:</p>
 
 <pre>
 &#91;ssm key="abc123" url="https://surniaulula.com/extend/plugins/screenshot-machine-shortcode/" dimension="800x600"&#93;

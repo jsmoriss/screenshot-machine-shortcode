@@ -28,7 +28,7 @@ Use the `ssm` shortcode in your content with the following arguments:
 * `wait="{wait in ms}"` (default is 200)
 * `title="{href title}"`
 * `link="{yes|no}"` (default is yes)
-* `target="{link target}"` (default is _blank)
+* `target="{frame name}"` (default is _blank)
 * `refresh="{yes|no}"` (default is yes)
 
 You can find the `{customer key}` on [your Screenshot Machine account/settings page](https://www.screenshotmachine.com/account.php).
@@ -49,21 +49,21 @@ Example device and dimension values:
 * `device="phone"` and `dimension="480x800"` - mobile phone screenshot with size 480x800 pixels
 * `device="tablet"` and `dimension="800x1280"` - tablet screenshot with size 800x1280 pixels
 
-`{jpeg|png|gif}` is the image format to use (default is jpg).
+The format `{jpeg|png|gif}` is an image format to use for the screenshot (default is jpg).
 
-`{cache expiration}` is the number of days a screenshot should be used before a new one is created.
+The `{cache expiration}` is a number of days a screenshot should be used before a new one is created (default is 14).
 
-`{wait in ms}` is the number of milliseconds to wait before capturing the screenshot.
+The `{wait in ms}` is a number of milliseconds to wait before capturing the screenshot (default is 200).
 
-`{href title}` is the title text for the image alt and link title.
+The `{href title}` is a title text for the image alt and title attributes.
 
 The link `{yes|no}` value will determine if the image is linked to the web page URL or not.
 
-The `{link target}` default will open links in a new window/tab. An empty string, '_self', '_top', '_parent', and a framename are also valid.
+The target `{frame name}` default value opens the link in a new window/tab. An empty string, "_self", "_top", "_parent", and an HTML frame name are also valid values.
 
 The refresh `{yes|no}` value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).
 
-Example:
+Example shortcode:
 
 <pre>
 &#91;ssm key="abc123" url="https://surniaulula.com/extend/plugins/screenshot-machine-shortcode/" dimension="800x600"&#93;
