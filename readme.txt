@@ -26,7 +26,7 @@ Use the `ssm` shortcode in your content with the following arguments:
 * `format="{jpg|png|gif}"` (default is jpg)
 * `days="{cache expiration}"` (default is 14)
 * `wait="{wait in ms}"` (default is 200)
-* `title="{href title}"
+* `title="{href title}"`
 * `link="{yes|no}"` (default is yes)
 * `target="{link target}"` (default is _blank)
 * `refresh="{yes|no}"` (default is yes)
