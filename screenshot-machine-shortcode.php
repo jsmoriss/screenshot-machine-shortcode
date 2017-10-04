@@ -44,13 +44,16 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 		}  
 
 		public static function &get_instance() {
+
 			if ( ! isset( self::$instance ) ) {
 				self::$instance = new self;
 			}
+
 			return self::$instance;
 		}
 
 		public static function load_textdomain() {
+
 			load_plugin_textdomain( 'screenshot-machine-shortcode', false, 'screenshot-machine-shortcode/languages/' );
 		}
 
