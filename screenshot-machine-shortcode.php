@@ -40,7 +40,7 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 
 			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
 
-			add_shortcode( 'ssm', array( __CLASS__, 'shortcode' ) );
+			add_shortcode( 'ssm', array( __CLASS__, 'do_shortcode' ) );
 		}  
 
 		public static function &get_instance() {
@@ -54,7 +54,7 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 			load_plugin_textdomain( 'screenshot-machine-shortcode', false, 'screenshot-machine-shortcode/languages/' );
 		}
 
-		public static function shortcode( $atts, $content = null ){
+		public static function do_shortcode( $atts, $content = null ){
 
 			extract( shortcode_atts( array(
 				'key' => '',
