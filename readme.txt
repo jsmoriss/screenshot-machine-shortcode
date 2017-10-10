@@ -97,13 +97,13 @@ Example shortcode:
 
 == Frequently Asked Questions ==
 
-= Frequently Asked Questions =
+<h3>Frequently Asked Questions</h3>
 
 * None
 
 == Other Notes ==
 
-= Additional Documentation =
+<h3>Additional Documentation</h3>
 
 * None
 
@@ -111,12 +111,12 @@ Example shortcode:
 
 == Changelog ==
 
-= Repositories =
+<h3>Repositories</h3>
 
 * [GitHub](https://jsmoriss.github.io/screenshot-machine-shortcode/)
 * [WordPress.org](https://wordpress.org/plugins/screenshot-machine-shortcode/developers/)
 
-= Version Numbering =
+<h3>Version Numbering</h3>
 
 Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
@@ -125,7 +125,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * {bugfix} = Backwards-compatible bug fixes or small improvements.
 * {stage}.{level} = Pre-production release: dev < a (alpha) < b (beta) < rc (release candidate).
 
-= Changelog / Release Notes =
+<h3>Changelog / Release Notes</h3>
 
 **Version 2.0.0 (2017/09/24)**
 
