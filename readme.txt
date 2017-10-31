@@ -8,9 +8,9 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/screenshot-machine-shortcode/assets/
 Tags: screenshot, machine, shortcode
 Contributors: jsmoriss
-Requires At Least: 3.7
-Tested Up To: 4.8.2
 Requires PHP: 5.3
+Requires At Least: 3.7
+Tested Up To: 4.8.3
 Stable Tag: 2.0.0
 
 Shortcode to include images from Screenshot Machine in your content.
