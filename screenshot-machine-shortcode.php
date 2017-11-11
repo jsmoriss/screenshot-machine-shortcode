@@ -57,7 +57,7 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 			load_plugin_textdomain( 'screenshot-machine-shortcode', false, 'screenshot-machine-shortcode/languages/' );
 		}
 
-		public static function do_shortcode( $atts, $content = null ){
+		public static function do_shortcode( $atts = array(), $content = null, $tag = '' ) { 
 
 			if ( ! is_array( $atts ) ) {	// empty string if no shortcode attributes
 				$atts = array();
