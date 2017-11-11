@@ -59,6 +59,10 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 
 		public static function do_shortcode( $atts, $content = null ){
 
+			if ( ! is_array( $atts ) ) {	// empty string if no shortcode attributes
+				$atts = array();
+			}
+
 			extract( shortcode_atts( array(
 				'key' => '',
 				'url' => '',
