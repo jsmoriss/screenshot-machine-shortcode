@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: JSM's Screenshot Machine Shortcode
  * Text Domain: screenshot-machine-shortcode
