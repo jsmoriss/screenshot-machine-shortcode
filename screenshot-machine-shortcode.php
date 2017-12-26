@@ -121,20 +121,20 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 			}
 
 			if ( $link == true ) {
-				$html .= '<a href="'.$url.'" title="'.$title.'" class="ssm_link" '.
-					( empty( $target ) ? '' : ' target="'.$target.'" ' ).' >';
+				$html .= '<a href="' . $url . '" title="' . $title . '" class="ssm_link" ' . 
+					( empty( $target ) ? '' : ' target="' . $target . '" ' ) . ' >';
 			}
 
-			$html .= '<img '.
-				'alt="'.$title.'" '.
-				'class="'.implode( ' ', $classes ).'" '.
-				'data-refreshcounter="0" '.
-				'data-src="'.$img_url.'" '.
-				( $width !== '' ? 'data-width="'.$width.'" ' : '' ).
-				( $height !== '' ? 'data-height="'.$height.'" ' : '' ).
-				'src="'.$img_url.'" '.
-				( $width !== '' ? 'width="'.$width.'" ' : '' ).
-				( $height !== '' ? 'height="'.$height.'" ' : '' ).
+			$html .= '<img ' . 
+				'alt="' . $title . '" ' . 
+				'class="' . implode( ' ', $classes ) . '" ' . 
+				'data-refreshcounter="0" ' . 
+				'data-src="' . $img_url . '" ' . 
+				( $width !== '' ? 'data-width="' . $width . '" ' : '' ).
+				( $height !== '' ? 'data-height="' . $height . '" ' : '' ).
+				'src="' . $img_url . '" ' . 
+				( $width !== '' ? 'width="' . $width . '" ' : '' ).
+				( $height !== '' ? 'height="' . $height . '" ' : '' ).
 				'/>';
 
 			if ( $link == true ) {
