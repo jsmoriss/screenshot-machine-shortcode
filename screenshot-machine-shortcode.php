@@ -104,7 +104,7 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 				$height = $matches[2] !== 'full' ? $matches[2] : '';
 			}
 
-			$img_url = esc_url( add_query_arg( array(
+			$img_url = esc_url_raw( add_query_arg( array(
 				'key' => $key,
 				'url' => urlencode( $url ),
 				'dimension' => $dimension,
