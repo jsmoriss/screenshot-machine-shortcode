@@ -114,7 +114,7 @@ Example shortcode:
 <h3>Repositories</h3>
 
 * [GitHub](https://jsmoriss.github.io/screenshot-machine-shortcode/)
-* [WordPress.org](https://wordpress.org/plugins/screenshot-machine-shortcode/developers/)
+* [WordPress.org](https://plugins.trac.wordpress.org/browser/screenshot-machine-shortcode/)
 
 <h3>Version Numbering</h3>
 
