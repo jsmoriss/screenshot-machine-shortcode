@@ -146,4 +146,3 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 
 	ScreenshotMachineShortCode::get_instance(); 
 }
-
