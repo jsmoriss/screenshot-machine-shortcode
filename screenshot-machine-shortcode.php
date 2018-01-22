@@ -29,9 +29,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for...' );
 }
 
-if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
+if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
-	class ScreenshotMachineShortCode {  
+	class ScreenshotMachineShortcode {  
 
 		private static $instance;
 		private static $api_url = 'http://api.screenshotmachine.com/';  
@@ -144,5 +144,5 @@ if ( ! class_exists( 'ScreenshotMachineShortCode' ) ) {
 		}
 	}
 
-	ScreenshotMachineShortCode::get_instance(); 
+	ScreenshotMachineShortcode::get_instance(); 
 }
