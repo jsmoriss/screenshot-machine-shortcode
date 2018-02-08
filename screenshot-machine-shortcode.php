@@ -82,8 +82,8 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 			$html = '';
 			$classes = array( 'ssm' );
-			$size = strtoupper( $size );	// just in case
-			$dimension = strtolower( str_replace( ' ', '', $dimension ) );	// just in case
+			$size = strtoupper( $size );	// Just in case.
+			$dimension = strtolower( str_replace( ' ', '', $dimension ) );	// Just in case.
 			$link = filter_var( $link, FILTER_VALIDATE_BOOLEAN );
 			$refresh = filter_var( $refresh, FILTER_VALIDATE_BOOLEAN );
 
