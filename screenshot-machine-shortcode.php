@@ -121,7 +121,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 			if ( $link == true ) {
 				$html .= '<a href="' . $url . '" title="' . $title . '" class="ssm_link" ' . 
-					( empty( $target ) ? '' : ' target="' . $target . '" ' ) . ' >';
+					( empty( $target ) ? '' : ' target="' . $target . '" rel="noopener"' ) . ' >';
 			}
 
 			$html .= '<img ' . 
