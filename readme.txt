@@ -120,14 +120,14 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 **Version 2.0.0 (2017/09/24)**
 
 * *New Features*
-	* None
+	* None.
 * *Improvements*
 	* Added support for the new "dimension" argument.
 	* Deprecated the "size" argument -- older size values are converted to dimension values for backwards compatibility.
 * *Bugfixes*
-	* None
+	* None.
 * *Developer Notes*
-	* None
+	* None.
 
 == Upgrade Notice ==
 
