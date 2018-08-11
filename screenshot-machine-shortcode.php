@@ -59,19 +59,19 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 		public static function do_shortcode( $atts = array(), $content = null, $tag = '' ) { 
 
-			if ( ! is_array( $atts ) ) {	// empty string if no shortcode attributes
+			if ( ! is_array( $atts ) ) {	// Empty string if no shortcode attributes.
 				$atts = array();
 			}
 
 			extract( shortcode_atts( array(
 				'key' => '',
 				'url' => '',
-				'size' => '',		// deprecated
+				'size' => '',		// Deprecated.
 				'dimension' => '120x90',
 				'device' => 'desktop',
 				'format' => 'jpg',
-				'days' => '14',		// for cacheLimit query value
-				'wait' => '200',	// for timeout query value
+				'days' => '14',		// For the cacheLimit query value.
+				'wait' => '200',	// For the timeout query value.
 				'title' => '',
 				'link' => true,
 				'target' => '_blank',
@@ -95,10 +95,12 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 				case 'M': $dimension='640x480'; break;
 				case 'L': $dimension='800x600'; break;
 				case 'X': $dimension='1024x768'; break;
-				default: break;	// nothing to do
+				default: break;	// Nothing to do.
 			}
 
-			// dimensions can be 1024x768 or 1024xfull
+			/**
+			 * Dimensions can be 1024x768 or 1024xfull.
+			 */
 			if ( preg_match( '/^([0-9]+)x([0-9]+|full)$/', $dimension, $matches ) ) {
 				$width = $matches[1];
 				$height = $matches[2] !== 'full' ? $matches[2] : '';
