@@ -107,12 +107,12 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			}
 
 			$img_url = esc_url_raw( add_query_arg( array(
-				'key' => $key,
-				'url' => urlencode( $url ),
-				'dimension' => $dimension,
-				'format' => $format,
+				'key'        => $key,
+				'url'        => urlencode( $url ),
+				'dimension'  => $dimension,
+				'format'     => $format,
 				'cacheLimit' => $days,
-				'timeout' => $wait,
+				'timeout'    => $wait,
 			), self::$api_url ) );
 
 			if ( $refresh )  {
