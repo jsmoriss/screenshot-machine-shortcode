@@ -64,20 +64,20 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			}
 
 			extract( shortcode_atts( array(
-				'key' => '',
-				'url' => '',
-				'size' => '',		// Deprecated.
+				'key'       => '',
+				'url'       => '',
+				'size'      => '',		// Deprecated argument.
 				'dimension' => '120x90',
-				'device' => 'desktop',
-				'format' => 'jpg',
-				'days' => '14',		// For the cacheLimit query value.
-				'wait' => '200',	// For the timeout query value.
-				'title' => '',
-				'link' => true,
-				'target' => '_blank',
-				'refresh' => true,
-				'width' => '',
-				'height' => '',
+				'device'    => 'desktop',
+				'format'    => 'jpg',
+				'days'      => '14',		// Used for the cacheLimit query value.
+				'wait'      => '200',		// Used for the timeout query value.
+				'title'     => '',
+				'link'      => true,
+				'target'    => '_blank',
+				'refresh'   => true,
+				'width'     => '',
+				'height'    => '',
 			), $atts ) );
 
 			$html = '';
