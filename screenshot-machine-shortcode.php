@@ -80,12 +80,12 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 				'height'    => '',
 			), $atts ) );
 
-			$html = '';
-			$classes = array( 'ssm' );
-			$size = strtoupper( $size );	// Just in case.
+			$html      = '';
+			$classes   = array( 'ssm' );
+			$size      = strtoupper( $size );	// Just in case.
 			$dimension = strtolower( str_replace( ' ', '', $dimension ) );	// Just in case.
-			$link = filter_var( $link, FILTER_VALIDATE_BOOLEAN );
-			$refresh = filter_var( $refresh, FILTER_VALIDATE_BOOLEAN );
+			$link      = filter_var( $link, FILTER_VALIDATE_BOOLEAN );
+			$refresh   = filter_var( $refresh, FILTER_VALIDATE_BOOLEAN );
 
 			switch ( $size ) {
 				case 'T': $dimension='120x90'; break;
