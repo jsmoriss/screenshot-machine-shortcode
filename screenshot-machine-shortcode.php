@@ -95,14 +95,13 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 				case 'M': $dimension='640x480'; break;
 				case 'L': $dimension='800x600'; break;
 				case 'X': $dimension='1024x768'; break;
-				default: break;	// Nothing to do.
 			}
 
 			/**
 			 * Dimensions can be 1024x768 or 1024xfull.
 			 */
 			if ( preg_match( '/^([0-9]+)x([0-9]+|full)$/', $dimension, $matches ) ) {
-				$width = $matches[1];
+				$width  = $matches[1];
 				$height = $matches[2] !== 'full' ? $matches[2] : '';
 			}
 
@@ -116,7 +115,9 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			), self::$api_url ) );
 
 			if ( $refresh )  {
+
 			    	$classes[] = 'ssm_refresh';
+
 				wp_register_script( 'ssm_refresh', plugins_url( 'screenshot-machine-shortcode.js' , __FILE__ ) ); 
    					wp_enqueue_script( 'ssm_refresh', array( 'jquery' ), '1.0.0', true );
 			}
