@@ -38,7 +38,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 		public function __construct()  {  
 
-			add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
+			add_action( 'plugins_loaded', array( __CLASS__, 'init_textdomain' ) );
 
 			add_shortcode( 'ssm', array( __CLASS__, 'do_shortcode' ) );
 		}  
@@ -52,7 +52,15 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			return self::$instance;
 		}
 
-		public static function load_textdomain() {
+		public static function init_textdomain() {
+
+			static $loaded = null;
+
+			if ( null !== $loaded ) {
+				return;
+			}
+
+			$loaded = true;
 
 			load_plugin_textdomain( 'screenshot-machine-shortcode', false, 'screenshot-machine-shortcode/languages/' );
 		}
