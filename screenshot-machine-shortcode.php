@@ -33,7 +33,8 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 	class ScreenshotMachineShortcode {  
 
-		private static $instance;
+		private static $instance = null;
+
 		private static $api_url = 'http://api.screenshotmachine.com/';  
 
 		public function __construct()  {  
@@ -45,7 +46,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 		public static function &get_instance() {
 
-			if ( ! isset( self::$instance ) ) {
+			if ( null === self::$instance ) {
 				self::$instance = new self;
 			}
 
