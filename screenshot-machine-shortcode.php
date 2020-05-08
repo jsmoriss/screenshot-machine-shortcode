@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.2
  * Tested Up To: 5.4.1
- * Version: 2.0.0
+ * Version: 2.1.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -47,6 +47,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 		public static function &get_instance() {
 
 			if ( null === self::$instance ) {
+
 				self::$instance = new self;
 			}
 
@@ -97,19 +98,27 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			$refresh   = filter_var( $refresh, FILTER_VALIDATE_BOOLEAN );
 
 			switch ( $size ) {
-				case 'T': $dimension='120x90'; break;
-				case 'S': $dimension='200x150'; break;
-				case 'E': $dimension='320x240'; break;
-				case 'N': $dimension='400x300'; break;
-				case 'M': $dimension='640x480'; break;
-				case 'L': $dimension='800x600'; break;
-				case 'X': $dimension='1024x768'; break;
+
+				case 'T': $dimension = '120x90'; break;
+
+				case 'S': $dimension = '200x150'; break;
+
+				case 'E': $dimension = '320x240'; break;
+
+				case 'N': $dimension = '400x300'; break;
+
+				case 'M': $dimension = '640x480'; break;
+
+				case 'L': $dimension = '800x600'; break;
+
+				case 'X': $dimension = '1024x768'; break;
 			}
 
 			/**
 			 * Dimensions can be 1024x768 or 1024xfull.
 			 */
 			if ( preg_match( '/^([0-9]+)x([0-9]+|full)$/', $dimension, $matches ) ) {
+
 				$width  = $matches[1];
 				$height = $matches[2] !== 'full' ? $matches[2] : '';
 			}
@@ -132,23 +141,25 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			}
 
 			if ( $link == true ) {
+
 				$html .= '<a href="' . $url . '" title="' . $title . '" class="ssm_link" ' . 
 					( empty( $target ) ? '' : ' target="' . $target . '" rel="noopener"' ) . ' >';
 			}
 
 			$html .= '<img ' . 
-				'alt="' . $title . '" ' . 
 				'class="' . implode( ' ', $classes ) . '" ' . 
+				'src="' . $img_url . '" ' . 
+				( $width !== '' ? 'width="' . $width . '" ' : '' ).
+				( $height !== '' ? 'height="' . $height . '" ' : '' ).
+				'alt="' . $title . '" ' . 
 				'data-refreshcounter="0" ' . 
 				'data-src="' . $img_url . '" ' . 
 				( $width !== '' ? 'data-width="' . $width . '" ' : '' ).
 				( $height !== '' ? 'data-height="' . $height . '" ' : '' ).
-				'src="' . $img_url . '" ' . 
-				( $width !== '' ? 'width="' . $width . '" ' : '' ).
-				( $height !== '' ? 'height="' . $height . '" ' : '' ).
 				'/>';
 
 			if ( $link == true ) {
+
 				$html .= '</a>';
 			}
 
