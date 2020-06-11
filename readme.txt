@@ -10,7 +10,7 @@ Tags: screenshot, machine, shortcode
 Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.2
-Tested Up To: 5.4.1
+Tested Up To: 5.4.2
 Stable Tag: 2.1.0
 
 Shortcode to include images from Screenshot Machine in your content.
