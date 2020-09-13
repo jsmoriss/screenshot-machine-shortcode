@@ -136,8 +136,9 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 			    	$classes[] = 'ssm_refresh';
 
-				wp_register_script( 'ssm_refresh', plugins_url( 'screenshot-machine-shortcode.js' , __FILE__ ) ); 
-   					wp_enqueue_script( 'ssm_refresh', array( 'jquery' ), '1.0.0', true );
+				wp_register_script( 'ssm_refresh', plugins_url( 'screenshot-machine-shortcode.min.js' , __FILE__ ) ); 
+
+   				wp_enqueue_script( 'ssm_refresh', array( 'jquery' ), '1.0.0', true );
 			}
 
 			if ( $link == true ) {
