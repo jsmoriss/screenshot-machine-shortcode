@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Shortcode for Screenshot Machine Images
  * Requires PHP: 5.6
- * Requires At Least: 4.2
+ * Requires At Least: 4.4
  * Tested Up To: 5.5.1
  * Version: 2.1.0
  *
