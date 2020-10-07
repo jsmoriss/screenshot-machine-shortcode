@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.4
 Tested Up To: 5.5.1
-Stable Tag: 2.1.0
+Stable Tag: 2.2.0
 
 Shortcode to include images from Screenshot Machine in your content.
 
