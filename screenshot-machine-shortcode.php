@@ -34,15 +34,15 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 	class ScreenshotMachineShortcode {  
 
-		private static $instance = null;
+		private $api_url = 'http://api.screenshotmachine.com/';  
 
-		private static $api_url = 'http://api.screenshotmachine.com/';  
+		private static $instance = null;
 
 		public function __construct()  {  
 
 			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
-			add_shortcode( 'ssm', array( __CLASS__, 'do_shortcode' ) );
+			add_shortcode( 'ssm', array( $this, 'do_shortcode' ) );
 		}  
 
 		public static function &get_instance() {
@@ -57,19 +57,10 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 		public function init_textdomain() {
 
-			static $local_cache = null;
-
-			if ( null === $local_cache ) {
-
-				$local_cache = 'screenshot-machine-shortcode';
-
-				load_plugin_textdomain( 'screenshot-machine-shortcode', false, 'screenshot-machine-shortcode/languages/' );
-			}
-
-			return $local_cache;
+			load_plugin_textdomain( 'screenshot-machine-shortcode', false, 'screenshot-machine-shortcode/languages/' );
 		}
 
-		public static function do_shortcode( $atts = array(), $content = null, $tag = '' ) { 
+		public function do_shortcode( $atts = array(), $content = null, $tag = '' ) { 
 
 			if ( ! is_array( $atts ) ) {	// Empty string if no shortcode attributes.
 
@@ -133,7 +124,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 				'format'     => $format,
 				'cacheLimit' => $days,
 				'timeout'    => $wait,
-			), self::$api_url ) );
+			), $this->api_url ) );
 
 			if ( $refresh )  {
 
