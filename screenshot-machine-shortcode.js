@@ -10,7 +10,7 @@ jQuery(document).ready(function () {
 
 					function (index, element) {
 
-						var a=new Image(); 
+						var a=new Image();
 
 						a.src=jQuery(element).attr('src');
 

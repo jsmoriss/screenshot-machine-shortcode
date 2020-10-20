@@ -34,7 +34,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 	class ScreenshotMachineShortcode {  
 
-		private $api_url = 'http://api.screenshotmachine.com/';  
+		private $api_url = 'http://api.screenshotmachine.com/';
 
 		private static $instance = null;
 
@@ -43,7 +43,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
 			add_shortcode( 'ssm', array( $this, 'do_shortcode' ) );
-		}  
+		}
 
 		public static function &get_instance() {
 
@@ -130,7 +130,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 			    	$classes[] = 'ssm_refresh';
 
-				wp_register_script( 'ssm_refresh', plugins_url( 'screenshot-machine-shortcode.min.js' , __FILE__ ) ); 
+				wp_register_script( 'ssm_refresh', plugins_url( 'screenshot-machine-shortcode.min.js' , __FILE__ ) );
 
    				wp_enqueue_script( 'ssm_refresh', array( 'jquery' ), '1.0.0', true );
 			}
@@ -162,5 +162,5 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 		}
 	}
 
-	ScreenshotMachineShortcode::get_instance(); 
+	ScreenshotMachineShortcode::get_instance();
 }
