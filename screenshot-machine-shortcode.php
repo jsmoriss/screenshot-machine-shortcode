@@ -36,7 +36,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 		private $api_url = 'http://api.screenshotmachine.com/';
 
-		private static $instance = null;
+		private static $instance = null;	// ScreenshotMachineShortcode class object.
 
 		public function __construct()  {  
 
