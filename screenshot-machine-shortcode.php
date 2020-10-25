@@ -32,13 +32,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
-	class ScreenshotMachineShortcode {  
+	class ScreenshotMachineShortcode {
 
 		private $api_url = 'http://api.screenshotmachine.com/';
 
 		private static $instance = null;	// ScreenshotMachineShortcode class object.
 
-		public function __construct()  {  
+		public function __construct()  {
 
 			add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
@@ -60,7 +60,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			load_plugin_textdomain( 'screenshot-machine-shortcode', false, 'screenshot-machine-shortcode/languages/' );
 		}
 
-		public function do_shortcode( $atts = array(), $content = null, $tag = '' ) { 
+		public function do_shortcode( $atts = array(), $content = null, $tag = '' ) {
 
 			if ( ! is_array( $atts ) ) {	// Empty string if no shortcode attributes.
 
