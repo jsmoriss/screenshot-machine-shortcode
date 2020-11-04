@@ -142,7 +142,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			}
 
 			$html .= '<img ' . 
-				'class="' . implode( ' ', $classes ) . '" ' . 
+				'class="' . implode( $glue = ' ', $classes ) . '" ' . 
 				'src="' . $img_url . '" ' . 
 				( $width !== '' ? 'width="' . $width . '" ' : '' ).
 				( $height !== '' ? 'height="' . $height . '" ' : '' ).
