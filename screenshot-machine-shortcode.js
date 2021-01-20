@@ -1,4 +1,4 @@
-jQuery( document ).on( 'ready', function(){
+jQuery( function(){
 
 	SSMSC_Refresh_IntervalId = self.setInterval(		
 
