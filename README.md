@@ -70,9 +70,11 @@
 
 <p>Example shortcode:</p>
 
-<pre>
-&#91;ssm key="abc123" url="https://google.com/" dimension="800x600"&#93;
-</pre>
+<pre>&#91;ssm key="abc123" url="https://google.com/" dimension="800x600"&#93;</pre>
+
+<h4>Need a Boost to your Social and Search Ranking?</h4>
+
+<p>Check out <a href="https://wordpress.org/plugins/wpsso/">the WPSSO Core plugin</a> to present your content at its best on social sites and in search results, no matter how webpages are shared, re-shared, messaged, posted, embedded, or crawled.</p>
 
 
 <h2>Installation</h2>
