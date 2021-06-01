@@ -135,7 +135,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
    				wp_enqueue_script( 'ssm_refresh', array( 'jquery' ), '1.0.0', true );
 			}
 
-			if ( $link == true ) {
+			if ( $link ) {
 
 				$html .= '<a href="' . $url . '" title="' . $title . '" class="ssm_link" ' . 
 					( empty( $target ) ? '' : ' target="' . $target . '" rel="noopener"' ) . ' >';
@@ -153,7 +153,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 				( $height !== '' ? 'data-height="' . $height . '" ' : '' ).
 				'/>';
 
-			if ( $link == true ) {
+			if ( $link ) {
 
 				$html .= '</a>';
 			}
