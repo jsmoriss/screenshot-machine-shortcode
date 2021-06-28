@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 4.5
 Tested Up To: 5.7.2
-Stable Tag: 2.2.0
+Stable Tag: 2.3.0
 
 Shortcode to include images from Screenshot Machine in your content.
 
@@ -119,7 +119,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.2.0 (2021/06/28)**
+**Version 2.3.0 (2021/06/28)**
 
 * **New Features**
 	* None.
@@ -135,7 +135,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.2.0 =
+= 2.3.0 =
 
 (2021/06/28) Updated the API URL from http to https.
 
