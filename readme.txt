@@ -119,14 +119,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.2.0 (2020/10/07)**
-
-Maintenance release.
+**Version 2.2.0 (2021/06/28)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Updated the API URL from http to https.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -139,5 +137,5 @@ Maintenance release.
 
 = 2.2.0 =
 
-(2020/10/07) Maintenance release.
+(2021/06/28) Updated the API URL from http to https.
 
