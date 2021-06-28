@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Screenshot Machine Shortcode</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Shortcode to include images from Screenshot Machine in your content.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.2.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.3.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.0 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.7.2</td></tr>
