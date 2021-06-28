@@ -8,12 +8,12 @@
  * Author: JS Morisset
  * Author URI: https://surniaulula.com/
  * License: GPLv3
- * License URI: http://www.gnu.org/licenses/gpl.txt
+ * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Shortcode for Screenshot Machine Images
  * Requires PHP: 7.0
  * Requires At Least: 4.5
  * Tested Up To: 5.7.2
- * Version: 2.2.0
+ * Version: 2.3.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -34,7 +34,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 	class ScreenshotMachineShortcode {
 
-		private $api_url = 'http://api.screenshotmachine.com/';
+		private $api_url = 'https://api.screenshotmachine.com/';
 
 		private static $instance = null;	// ScreenshotMachineShortcode class object.
 
