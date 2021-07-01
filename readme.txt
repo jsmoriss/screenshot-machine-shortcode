@@ -9,7 +9,7 @@ Assets URI: https://jsmoriss.github.io/screenshot-machine-shortcode/assets/
 Tags: screenshot, machine, shortcode
 Contributors: jsmoriss
 Requires PHP: 7.0
-Requires At Least: 4.5
+Requires At Least: 5.0
 Tested Up To: 5.7.2
 Stable Tag: 2.3.0
 
@@ -131,7 +131,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Requires At Least**
 	* PHP v7.0.
-	* WordPress v4.5.
+	* WordPress v5.0.
 
 == Upgrade Notice ==
 
