@@ -69,10 +69,6 @@ Example shortcode:
 
 <pre>&#91;ssm key="abc123" url="https://google.com/" dimension="800x600"&#93;</pre>
 
-= Need a Boost to your Social and Search Ranking? =
-
-[WPSSO is an advanced structured data plugin for WordPress SEO and SMO](https://wordpress.org/plugins/wpsso/) that helps you rank higher and improves click through rates by presenting your content at its best in **search results** and on **social sites** - no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
-
 == Installation ==
 
 = Automated Install =
