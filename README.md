@@ -72,7 +72,6 @@
 
 <pre>&#91;ssm key="abc123" url="https://google.com/" dimension="800x600"&#93;</pre>
 
-
 <h2>Installation</h2>
 
 <h4>Automated Install</h4>
@@ -100,10 +99,4 @@
 <li>Click on the <em>Install Now</em> button.</li>
 <li>Click the <em>Activate Plugin</em> link.</li>
 </ol>
-
-
-<h2>Frequently Asked Questions</h2>
-
-
-
 
