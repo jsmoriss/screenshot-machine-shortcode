@@ -137,18 +137,18 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 			if ( $link ) {
 
-				$html .= '<a href="' . $url . '" title="' . $title . '" class="ssm_link" ' . 
+				$html .= '<a href="' . $url . '" title="' . $title . '" class="ssm_link" ' .
 					( empty( $target ) ? '' : ' target="' . $target . '" rel="noopener"' ) . ' >';
 			}
 
-			$html .= '<img ' . 
-				'class="' . implode( $glue = ' ', $classes ) . '" ' . 
-				'src="' . $img_url . '" ' . 
+			$html .= '<img ' .
+				'class="' . implode( $glue = ' ', $classes ) . '" ' .
+				'src="' . $img_url . '" ' .
 				( $width !== '' ? 'width="' . $width . '" ' : '' ).
 				( $height !== '' ? 'height="' . $height . '" ' : '' ).
-				'alt="' . $title . '" ' . 
-				'data-refreshcounter="0" ' . 
-				'data-src="' . $img_url . '" ' . 
+				'alt="' . $title . '" ' .
+				'data-refreshcounter="0" ' .
+				'data-src="' . $img_url . '" ' .
 				( $width !== '' ? 'data-width="' . $width . '" ' : '' ).
 				( $height !== '' ? 'data-height="' . $height . '" ' : '' ).
 				'/>';

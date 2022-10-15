@@ -1,6 +1,6 @@
 jQuery( function(){
 
-	SSMSC_Refresh_IntervalId = self.setInterval(		
+	SSMSC_Refresh_IntervalId = self.setInterval(
 
 		function SSMSC_Refresh(){
 
