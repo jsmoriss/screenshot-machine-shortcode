@@ -108,7 +108,7 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 				case 'X': $dimension = '1024x768'; break;
 			}
 
-			/**
+			/*
 			 * Dimensions can be 1024x768 or 1024xfull.
 			 */
 			if ( preg_match( '/^([0-9]+)x([0-9]+|full)$/', $dimension, $matches ) ) {
