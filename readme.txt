@@ -1,5 +1,5 @@
-=== JSM's Screenshot Machine Shortcode ===
-Plugin Name: JSM's Screenshot Machine Shortcode
+=== JSM Screenshot Machine Shortcode ===
+Plugin Name: JSM Screenshot Machine Shortcode
 Plugin Slug: screenshot-machine-shortcode
 Text Domain: screenshot-machine-shortcode
 Domain Path: /languages
