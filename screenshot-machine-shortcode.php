@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: JSM's Screenshot Machine Shortcode
+ * Plugin Name: JSM Screenshot Machine Shortcode
  * Text Domain: screenshot-machine-shortcode
  * Domain Path: /languages
  * Plugin URI: https://surniaulula.com/extend/plugins/screenshot-machine-shortcode/
