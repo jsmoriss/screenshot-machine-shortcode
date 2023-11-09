@@ -12,7 +12,7 @@
  * Description: Shortcode for Screenshot Machine Images
  * Requires PHP: 7.2.34
  * Requires At Least: 5.5
- * Tested Up To: 6.4.0
+ * Tested Up To: 6.4.1
  * Version: 2.3.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
