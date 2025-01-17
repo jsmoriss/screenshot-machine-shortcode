@@ -46,18 +46,18 @@
 
 <p><strong>Shortcode to include images from <a href="http://screenshotmachine.com/">Screenshot Machine</a> in your content.</strong></p>
 
-<h4><code>ssm</code> shortcode required arguments</h4>
+<h4>SSM Shortcode Required Arguments:</h4>
 
 <ul>
 <li><code>key="{customer key}"</code> (required)</li>
 <li><code>url="{url}"</code> (required)</li>
 </ul>
 
-<p>You can find the <code>{customer key}</code> on <a href="https://www.screenshotmachine.com/account.php">your Screenshot Machine customer profile</a>.</p>
+<p>You can find the {customer key} on <a href="https://www.screenshotmachine.com/account.php">your Screenshot Machine customer profile</a>.</p>
 
-<p>The <code>{url}</code> is the web page URL you want to capture in the screenshot.</p>
+<p>The {url} is the web page URL you want to capture in the screenshot.</p>
 
-<h4><code>ssm</code> shortcode optional arguments</h4>
+<h4>SSM Shortcode Optional Arguments:</h4>
 
 <ul>
 <li><code>dimension="{width x height}"</code> (default is 120x90)</li>
@@ -79,8 +79,7 @@
 <li><code>refresh="{yes|no}"</code> (default is yes)</li>
 </ul>
 
-<p><code>dimension="{width x height}"</code>
- examples:</p>
+<p>dimension="{width x height}" examples:</p>
 
 <ul>
 <li><code>dimension="320x240"</code> - screenshot size 320x240 pixels.</li>
@@ -90,14 +89,11 @@
 <li><code>dimension="1024xfull"</code> - full page screenshot with width equals to 1024 pixels (can be pretty long).</li>
 </ul>
 
-<p><code>days="{cache expiration}"</code>
- is a number of days that a screenshot should be used before a new one is created (default is 14).</p>
+<p>days="{cache expiration}" is a number of days that a screenshot should be used before a new one is created (default is 14).</p>
 
-<p><code>wait="{ms}"</code>
- is a number of milliseconds to wait before capturing the screenshot (default is 200).</p>
+<p>wait="{ms}" is a number of milliseconds to wait before capturing the screenshot (default is 200).</p>
 
-<p><code>click="{css selector}"</code>
-, <code>hide="{css selectors}"</code>, and <code>select="{css selector}"</code> values are CSS class and/or id selectors. For example:</p>
+<p>click="{css selector}", hide="{css selectors}", and select="{css selector}" values are CSS class and/or id selectors. For example:</p>
 
 <ul>
 <li><code>click=".button-close"</code> - click this CSS class container before taking a screenshot.</li>
@@ -105,15 +101,15 @@
 <li><code>select="table.table:nth-child(3) &gt; tbody:nth-child(2) &gt; tr:nth-child(15)"</code> - take a screenshot only of this CSS container.</li>
 </ul>
 
-<p>The <code>title="{title}"</code> is a text string for the image alt and anchor title attributes.</p>
+<p>The title="{title}" is a text string for the image alt and anchor title attributes.</p>
 
-<p>The <code>link="{yes|no}"</code> value will determine if the image is linked to the web page URL or not.</p>
+<p>The link="{yes|no}" value will determine if the image is linked to the web page URL or not.</p>
 
-<p>The <code>target="{name}"</code> opens the link in that target (default is "_blank"). An empty string, "_self", "_top", "_parent", or an HTML frame are other possible values.</p>
+<p>The target="{name}" opens the link in that target (default is "_blank"). An empty string, "_self", "_top", "_parent", or an HTML frame are other possible values.</p>
 
-<p>The <code>refresh="{yes|no}"</code> value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).</p>
+<p>The refresh="{yes|no}" value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).</p>
 
-<h4>example shortcode</h4>
+<h4>SSM Example Shortcode:</h4>
 
 <pre>&#91;ssm key="abc123" url="https://google.com/" dimension="800x600"&#93;</pre>
 
