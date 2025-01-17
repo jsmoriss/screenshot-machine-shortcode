@@ -19,7 +19,7 @@ Shortcode to include images from Screenshot Machine in your content.
 
 **Shortcode to include images from [Screenshot Machine](http://screenshotmachine.com/) in your content.**
 
-= SSM Shortcode Required Arguments: =
+= SSM Shortcode Required Attributes: =
 
 * `key="{customer API key}"`
 * `url="{webpage url}"`
@@ -28,7 +28,7 @@ You can find the {customer API key} in your [Screenshot Machine dashboard](https
 
 The {webpage url} is the web page URL you want to capture in the screenshot.
 
-= SSM Shortcode Optional Arguments: =
+= SSM Shortcode Optional Attributes: =
 
 * `dimension="{width x height}"` (default is 120x90)
 * `device="{desktop|phone|tablet}"` (default is desktop)
@@ -48,7 +48,9 @@ The {webpage url} is the web page URL you want to capture in the screenshot.
 * `target="{name}"` (default is _blank)
 * `refresh="{yes|no}"` (default is yes)
 
-dimension="{width x height}" examples:
+= SSM Shortcode Attribute Details: =
+
+The dimension="{width x height}" attribute examples:
 
 * `dimension="320x240"` - screenshot size 320x240 pixels.
 * `dimension="800x600"` - screenshot size 800x600 pixels.
@@ -56,25 +58,25 @@ dimension="{width x height}" examples:
 * `dimension="1920x1080"` - screenshot size 1920x1080 pixels.
 * `dimension="1024xfull"` - full page screenshot with width equals to 1024 pixels (can be pretty long).
 
-days="{cache expiration}" is a number of days that a screenshot should be used before a new one is created (default is 14).
+The days="{cache expiration}" attribute value is a number of days that a screenshot should be used before a new one is created (default is 14).
 
-wait="{ms}" is a number of milliseconds to wait before capturing the screenshot (default is 200).
+The wait="{ms}" attribute value is a number of milliseconds to wait before capturing the screenshot (default is 200).
 
-click="{css selector}", hide="{css selectors}", and select="{css selector}" values are CSS class and/or id selectors. For example:
+The click="{css selector}", hide="{css selectors}", and select="{css selector}" attribute values are CSS class and/or id selectors. For example:
 
 * `click=".button-close"` - click this CSS class container before taking a screenshot.
 * `hide=".add-banner1,.add-banner2"` - hide this CSS class container before taking a screenshot.
 * `select="table.table:nth-child(3) > tbody:nth-child(2) > tr:nth-child(15)"` - take a screenshot only of this CSS container.
 
-The title="{title}" is a text string for the image alt and anchor title attributes.
+The title="{title}" attribute value is a text string for the image alt and anchor title attributes.
 
-The link="{yes|no}" value will determine if the image is linked to the web page URL or not.
+The link="{yes|no}" attribute value will determine if the image is linked to the web page URL or not.
 
-The target="{name}" opens the link in that target (default is "_blank"). An empty string, "_self", "_top", "_parent", or an HTML frame are other possible values.
+The target="{name}" attribute opens the link in that target (default is "_blank"). An empty string, "_self", "_top", "_parent", or an HTML frame are other possible values.
 
-The refresh="{yes|no}" value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).
+The refresh="{yes|no}" attribute value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).
 
-= SSM Example Shortcode: =
+= SSM Shortcode Example: =
 
 <pre>&#91;ssm key="abc123" url="https://google.com/" dimension="800x600"&#93;</pre>
 

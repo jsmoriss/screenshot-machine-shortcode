@@ -46,7 +46,7 @@
 
 <p><strong>Shortcode to include images from <a href="http://screenshotmachine.com/">Screenshot Machine</a> in your content.</strong></p>
 
-<h4>SSM Shortcode Required Arguments:</h4>
+<h4>SSM Shortcode Required Attributes:</h4>
 
 <ul>
 <li><code>key="{customer API key}"</code></li>
@@ -57,7 +57,7 @@
 
 <p>The {webpage url} is the web page URL you want to capture in the screenshot.</p>
 
-<h4>SSM Shortcode Optional Arguments:</h4>
+<h4>SSM Shortcode Optional Attributes:</h4>
 
 <ul>
 <li><code>dimension="{width x height}"</code> (default is 120x90)</li>
@@ -79,7 +79,9 @@
 <li><code>refresh="{yes|no}"</code> (default is yes)</li>
 </ul>
 
-<p>dimension="{width x height}" examples:</p>
+<h4>SSM Shortcode Attribute Details:</h4>
+
+<p>The dimension="{width x height}" attribute examples:</p>
 
 <ul>
 <li><code>dimension="320x240"</code> - screenshot size 320x240 pixels.</li>
@@ -89,11 +91,11 @@
 <li><code>dimension="1024xfull"</code> - full page screenshot with width equals to 1024 pixels (can be pretty long).</li>
 </ul>
 
-<p>days="{cache expiration}" is a number of days that a screenshot should be used before a new one is created (default is 14).</p>
+<p>The days="{cache expiration}" attribute value is a number of days that a screenshot should be used before a new one is created (default is 14).</p>
 
-<p>wait="{ms}" is a number of milliseconds to wait before capturing the screenshot (default is 200).</p>
+<p>The wait="{ms}" attribute value is a number of milliseconds to wait before capturing the screenshot (default is 200).</p>
 
-<p>click="{css selector}", hide="{css selectors}", and select="{css selector}" values are CSS class and/or id selectors. For example:</p>
+<p>The click="{css selector}", hide="{css selectors}", and select="{css selector}" attribute values are CSS class and/or id selectors. For example:</p>
 
 <ul>
 <li><code>click=".button-close"</code> - click this CSS class container before taking a screenshot.</li>
@@ -101,15 +103,15 @@
 <li><code>select="table.table:nth-child(3) &gt; tbody:nth-child(2) &gt; tr:nth-child(15)"</code> - take a screenshot only of this CSS container.</li>
 </ul>
 
-<p>The title="{title}" is a text string for the image alt and anchor title attributes.</p>
+<p>The title="{title}" attribute value is a text string for the image alt and anchor title attributes.</p>
 
-<p>The link="{yes|no}" value will determine if the image is linked to the web page URL or not.</p>
+<p>The link="{yes|no}" attribute value will determine if the image is linked to the web page URL or not.</p>
 
-<p>The target="{name}" opens the link in that target (default is "_blank"). An empty string, "_self", "_top", "_parent", or an HTML frame are other possible values.</p>
+<p>The target="{name}" attribute opens the link in that target (default is "_blank"). An empty string, "_self", "_top", "_parent", or an HTML frame are other possible values.</p>
 
-<p>The refresh="{yes|no}" value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).</p>
+<p>The refresh="{yes|no}" attribute value includes javascript to retry the image every second until it's available (for a maximum of 10 seconds).</p>
 
-<h4>SSM Example Shortcode:</h4>
+<h4>SSM Shortcode Example:</h4>
 
 <pre>&#91;ssm key="abc123" url="https://google.com/" dimension="800x600"&#93;</pre>
 
