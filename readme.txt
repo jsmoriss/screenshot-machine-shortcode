@@ -21,12 +21,12 @@ Shortcode to include images from Screenshot Machine in your content.
 
 = SSM Shortcode Required Arguments: =
 
-* `key="{customer key}"` (required)
-* `url="{url}"` (required)
+* `key="{customer API key}"`
+* `url="{webpage url}"`
 
-You can find the {customer key} on [your Screenshot Machine customer profile](https://www.screenshotmachine.com/account.php).
+You can find the {customer API key} in your [Screenshot Machine dashboard](https://www.screenshotmachine.com/dashboard.php).
 
-The {url} is the web page URL you want to capture in the screenshot.
+The {webpage url} is the web page URL you want to capture in the screenshot.
 
 = SSM Shortcode Optional Arguments: =
 
