@@ -13,7 +13,7 @@
  * Requires PHP: 7.4.33
  * Requires At Least: 5.9
  * Tested Up To: 6.7.1
- * Version: 2.3.0
+ * Version: 3.0.0-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -62,49 +62,70 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 
 		public function do_shortcode( $atts = array(), $content = null, $tag = '' ) {
 
-			if ( ! is_array( $atts ) ) {	// Empty string if no shortcode attributes.
-
-				$atts = array();
-			}
+			if ( ! is_array( $atts ) ) $atts = array();	// Empty string if no shortcode attributes.
 
 			extract( shortcode_atts( array(
-				'key'       => '',
-				'url'       => '',
-				'size'      => '',		// Deprecated argument.
-				'dimension' => '120x90',
-				'device'    => 'desktop',
-				'format'    => 'jpg',
-				'days'      => '14',		// Used for the cacheLimit query value.
-				'wait'      => '200',		// Used for the timeout query value.
-				'title'     => '',
+				'key'       => false,		// Customer API key.
+				'url'       => false,		// URL you to capture.
+				'size'      => false,		// Deprecated.
+				'dimension' => '120x90',	// Default value is 120x90.
+				'device'    => 'desktop',	// desktop, phone, tablet.
+				'format'    => 'jpg',		// jpg, png, gif.
+				'days'      => '14',		// How old (in days) to accept a cached image.
+				'wait'      => '200',		// How long capturing engine should wait before the screenshot is created.
+				'zoom'      => '100',		// Manage zoom scale of the webpage.
+				'click'     => false,		// Trigger a "click" event on CSS selector.
+				'hide'      => false,		// Hide/remove a CSS selector(s).
+				'cookies'   => false,		// Semicolon [;] separated list of cookies.
+				'language'  => false,		// Sets the Accept-Language header.
+				'agent'     => false,		// Sets the User-Agent header.
+				'select'    => false,		// CSS selector to DOM element (example: table.table:nth-child(3) > tbody:nth-child(2) > tr:nth-child(15)).
+				'crop'      => false,		// Capture selected region (example: 100,0,800,300).
+				'title'     => false,
 				'link'      => true,
 				'target'    => '_blank',
 				'refresh'   => true,
-				'width'     => '',
-				'height'    => '',
+				'width'     => false,
+				'height'    => false,
 			), $atts ) );
 
-			$html      = '';
-			$classes   = array( 'ssm' );
-			$size      = strtoupper( $size );	// Just in case.
-			$dimension = strtolower( str_replace( ' ', '', $dimension ) );	// Just in case.
+			/*
+			 * Sanitize attribute values.
+			 *
+			 * See https://developer.wordpress.org/apis/security/sanitizing/.
+			 */
+			$key       = sanitize_text_field( $key );
+			$url       = filter_var( $url, FILTER_VALIDATE_URL );
+			$size      = strtoupper( sanitize_text_field( $size ) );	// Deprecated.
+			$dimension = strtolower( str_replace( ' ', '', sanitize_text_field( $dimension ) ) );
+			$device    = sanitize_text_field( $device );
+			$format    = sanitize_text_field( $format );
+			$days      = floatval( $days );
+			$wait      = intval( $wait );
+			$zoom      = intval( $zoom );
+			$click     = sanitize_text_field( $click );
+			$hide      = sanitize_text_field( $hide );
+			$cookies   = sanitize_text_field( $cookies );
+			$language  = sanitize_text_field( $language );
+			$agent     = sanitize_text_field( $agent );
+			$select    = sanitize_text_field( $select );
+			$crop      = sanitize_text_field( $crop );
+			$title     = sanitize_text_field( $title );
 			$link      = filter_var( $link, FILTER_VALIDATE_BOOLEAN );
+			$target    = sanitize_text_field( $target );
 			$refresh   = filter_var( $refresh, FILTER_VALIDATE_BOOLEAN );
+			$width     = intval( $width );
+			$height    = intval( $height );
+			$classes   = array( 'ssm' );
 
-			switch ( $size ) {
+			switch ( $size ) {	// Deprecated.
 
 				case 'T': $dimension = '120x90'; break;
-
 				case 'S': $dimension = '200x150'; break;
-
 				case 'E': $dimension = '320x240'; break;
-
 				case 'N': $dimension = '400x300'; break;
-
 				case 'M': $dimension = '640x480'; break;
-
 				case 'L': $dimension = '800x600'; break;
-
 				case 'X': $dimension = '1024x768'; break;
 			}
 
@@ -113,50 +134,68 @@ if ( ! class_exists( 'ScreenshotMachineShortcode' ) ) {
 			 */
 			if ( preg_match( '/^([0-9]+)x([0-9]+|full)$/', $dimension, $matches ) ) {
 
-				$width  = $matches[1];
-				$height = $matches[2] !== 'full' ? $matches[2] : '';
+				$width  = intval( $matches[ 1 ] );
+				$height = $matches[ 2 ] !== 'full' ? intval( $matches[ 2 ] ) : false;
 			}
 
+			/*
+			 * Get the screenshot image URL. Note that setting any query variable’s value to boolean false removes the key.
+			 *
+			 * See https://www.screenshotmachine.com/website-screenshot-api.php.
+			 */
 			$img_url = esc_url_raw( add_query_arg( array(
-				'key'        => $key,
-				'url'        => urlencode( $url ),
-				'dimension'  => $dimension,
-				'format'     => $format,
-				'cacheLimit' => $days,
-				'timeout'    => $wait,
+				'key'             => $key,
+				'url'             => urlencode( $url ),
+				'dimension'       => $dimension,
+				'device'          => $device,
+				'format'          => $format,
+				'cacheLimit'      => $days,
+				'delay'           => $wait,
+				'zoom'            => $zoom,
+				'click'           => urlencode( $click ),
+				'hide'            => urlencode( $hide ),
+				'cookies'         => urlencode( $cookies ),
+				'accept-language' => urlencode( $language ),
+				'user-agent'      => urlencode( $agent ),
+				'selector'        => urlencode( $select ),
+				'crop'            => urlencode( $crop ),
 			), $this->api_url ) );
 
+			/*
+			 * Maybe include javascript to retry the image every second until it's available (for a maximum of 10 seconds).
+			 */
 			if ( $refresh )  {
 
 			    	$classes[] = 'ssm_refresh';
 
-				wp_register_script( 'ssm_refresh', plugins_url( 'screenshot-machine-shortcode.min.js' , __FILE__ ) );
+				wp_register_script( 'ssm_refresh', plugins_url( 'js/screenshot-machine-shortcode.min.js' , __FILE__ ) );
 
    				wp_enqueue_script( 'ssm_refresh', array( 'jquery' ), '1.0.0', true );
 			}
 
-			if ( $link ) {
+			/*
+			 * Create the output HTML.
+			 */
+			$html = '';
 
-				$html .= '<a href="' . $url . '" title="' . $title . '" class="ssm_link" ' .
-					( empty( $target ) ? '' : ' target="' . $target . '" rel="noopener"' ) . ' >';
-			}
+			if ( $link ) $html .= '<a href="' . esc_url( $url ) . '" class="ssm_link" ' .
+				( $width ? 'width="' . esc_attr( $width ) . '" ' : '' ) .		// Not false, null, or 0.
+				( $height ? 'height="' . esc_attr( $height ) . '" ' : '' ) .		// Not false, null, or 0.
+				( $title ? 'title="' . esc_attr( $title ) . '" ' : '' ) .
+				( $target ? ' target="' . esc_attr( $target ) . '" rel="noopener"' : '' ) .
+				'>';
 
-			$html .= '<img ' .
-				'class="' . implode( $glue = ' ', $classes ) . '" ' .
-				'src="' . $img_url . '" ' .
-				( $width !== '' ? 'width="' . $width . '" ' : '' ).
-				( $height !== '' ? 'height="' . $height . '" ' : '' ).
-				'alt="' . $title . '" ' .
-				'data-refreshcounter="0" ' .
-				'data-src="' . $img_url . '" ' .
-				( $width !== '' ? 'data-width="' . $width . '" ' : '' ).
-				( $height !== '' ? 'data-height="' . $height . '" ' : '' ).
-				'/>';
+			$html .= '<img src="' . esc_url( $img_url ) . '" ' .
+				'class="' . esc_attr( implode( $glue = ' ', $classes ) ) . '" ' .
+				( $width ? 'width="' . esc_attr( $width ) . '" ' : '' ) .		// Not false, null, or 0.
+				( $height ? 'height="' . esc_attr( $height ) . '" ' : '' ) .		// Not false, null, or 0.
+				( $title ? 'alt="' . esc_attr( $title ) . '" ' : '' ) .
+				'data-src="' . esc_url( $img_url ) . '" ' .
+				( $width ? 'data-width="' . esc_attr( $width ) . '" ' : '' ) .		// Not false, null, or 0.
+				( $height ? 'data-height="' . esc_attr( $height ) . '" ' : '' ) .	// Not false, null, or 0.
+				'data-refreshcounter="0"/>';
 
-			if ( $link ) {
-
-				$html .= '</a>';
-			}
+			if ( $link ) $html .= '</a>';
 
 			return $html;
 		}
