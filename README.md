@@ -19,13 +19,13 @@
 <h4>SSM Shortcode Required Arguments:</h4>
 
 <ul>
-<li><code>key="{customer key}"</code> (required)</li>
-<li><code>url="{url}"</code> (required)</li>
+<li><code>key="{customer API key}"</code></li>
+<li><code>url="{webpage url}"</code></li>
 </ul>
 
-<p>You can find the {customer key} on <a href="https://www.screenshotmachine.com/account.php">your Screenshot Machine customer profile</a>.</p>
+<p>You can find the {customer API key} in your <a href="https://www.screenshotmachine.com/dashboard.php">Screenshot Machine dashboard</a>.</p>
 
-<p>The {url} is the web page URL you want to capture in the screenshot.</p>
+<p>The {webpage url} is the web page URL you want to capture in the screenshot.</p>
 
 <h4>SSM Shortcode Optional Arguments:</h4>
 
