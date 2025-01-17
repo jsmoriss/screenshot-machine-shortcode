@@ -102,7 +102,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-rc.1 (2025/01/16)**
+**Version 3.0.0 (2025/01/17)**
 
 * **New Features**
 	* None.
@@ -132,9 +132,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-rc.1 =
+= 3.0.0 =
 
-(2025/01/16) None.
+(2025/01/17) None.
 
 = 2.3.0 =
 
