@@ -109,7 +109,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Improved shortcode attribute sanitization.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -136,7 +136,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.0.0 =
 
-(2025/01/17) None.
+(2025/01/17) Improved shortcode attribute sanitization.
 
 = 2.3.0 =
 
